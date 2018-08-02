@@ -22,7 +22,7 @@ public class FindLowestInRotatedArray {
             mid = start + (end - start) / 2;
             if (nums[mid] < nums[mid + 1] && nums[mid] < nums[mid - 1]) {
                 return nums[mid];
-            } else if (nums[mid] > nums[end]) { // use end as breaking point in case 1,2,3
+            } else if (nums[mid] > nums[end]) { // TODO: use end as breaking point in case 1,2,3
                 start = mid;
             } else if (nums[mid] <= nums[end]) {
                 end = mid;

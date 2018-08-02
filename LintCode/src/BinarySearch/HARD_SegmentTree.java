@@ -14,7 +14,7 @@ public class HARD_SegmentTree {
 
 
 
-    // Details: http://wulc.me/2016/08/05/Segment%20Tree%20%E7%AE%80%E4%BB%8B/
+    // TODO: Details: http://wulc.me/2016/08/05/Segment%20Tree%20%E7%AE%80%E4%BB%8B/
     private class SegmentTreeNode {
         SegmentTreeNode left, right;
         int start, end, min;
@@ -37,7 +37,11 @@ public class HARD_SegmentTree {
         return root;
     }
     private int query(SegmentTreeNode root, int start, int end) {
-        if (root.start == start && root.end == end) {
+        // TODO: Notice these two statements
+        if (start > end || root == null) {
+            return 0;
+        }
+        if (root.start >= start && root.end <= end) {
             return root.min;
         }
         int mid = root.start + (root.end - root.start) / 2;

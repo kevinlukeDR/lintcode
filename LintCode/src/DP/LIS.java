@@ -28,7 +28,7 @@ public class LIS {
             return 0;
         }
         int max = 0;
-        // Definition: dp[i] is 0 - i including i, longest LIS's length
+        // TODO: Definition: dp[i] is 0 - i including i, longest LIS's length
         int[] dp = new int[nums.length];
         for (int i = 0; i < nums.length; i++) {
             for (int j = i - 1; j >= 0; j--) {
@@ -41,8 +41,8 @@ public class LIS {
         return max;
     }
 
-    // O(nlogn)
-    // Maintain a increasing list, and using binary search to check index needs to be replaced
+    // TODO: O(nlogn)
+    // TODO: Maintain a increasing list, and using binary search to check index needs to be replaced
     /**
      * @param nums: An integer array
      * @return: The length of LIS (longest increasing subsequence)
