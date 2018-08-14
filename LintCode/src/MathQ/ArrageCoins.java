@@ -1,4 +1,4 @@
-package Math;
+package MathQ;
 
 public class ArrageCoins {
 //    988. Arranging Coins
